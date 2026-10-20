@@ -16,11 +16,22 @@ for i in range(n):
         t = float(s)
 
         cnt_t = cnt_t + 1
-        sum_t = summ_t + t
+        sum_t = sum_t + t
         
         if t > max_t:
             max_t = t
             
         if t > porog:
             p = p + 1
+
+if cnt_t > 0:            
+    sr = sum_t / cnt_t
+else:
+    sr = 0.0
+
+print(v)
+print(errors)
+print(p)
+print("%.1f" % max_t)
+print("%.1f" % sr)
 
