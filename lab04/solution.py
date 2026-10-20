@@ -16,3 +16,14 @@ def average(scores):
         sum = sum + s
 
     return round(sum / len(scores), 2)
+
+def above_average(names, scores):
+
+    sr = average(scores)
+
+    res = []
+    for i in range(len(scores)):
+        if scores[i] > sr:
+            res.append(names[i])
+
+    return res
