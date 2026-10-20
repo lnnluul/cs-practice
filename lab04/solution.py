@@ -27,3 +27,23 @@ def above_average(names, scores):
             res.append(names[i])
 
     return res
+
+def ranking(names, scores):
+
+    ind = []
+    for i in range(len(names)):
+        ind.append(i)
+
+    for i in range(len(ind)):
+        for j in range(len(ind) - 1):
+            idx1 = ind[j]
+            idx2 = ind[j + 1]
+            if scores[idx1] < scores[idx2]:
+
+                ind[j], ind[j + 1] = ind[j + 1], ind[j]
+
+    itog = []
+    for idx in ind:
+        itog.append(names[idx])
+
+    return itog
